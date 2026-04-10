@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	is_valid_placment(int row, int col, int num, int **shap)
+int	is_valid_placement(int row, int col, int num, int **shap)
 {
 	int	i;
 
 	i = 0;
-	while ()
+	while (i < 4)
 	{
 		if (shap[row][i] == num || shap[i][col] == num)
 			return (0);

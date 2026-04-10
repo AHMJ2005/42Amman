@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	count_row_left(int row, int **shap);
-int	count_row_right(int row, int **shap);
-int	count_col_top(int col, int **shap);
-int	count_col_bottom(int col, int **shap);
+int	count_visible_row_left(int row, int **shap);
+int	count_visible_row_right(int row, int **shap);
+int	count_visible_col_top(int col, int **shap);
+int	count_visible_col_bottom(int col, int **shap);
 
 int	check_row(int row, int **shap, int *input)
 {
@@ -21,19 +21,20 @@ int	check_row(int row, int **shap, int *input)
 	int	filled;
 
 	i = 0;
-	filled = 0;
+	filled = 1;
 	while (i < 4)
 	{
 		if (shap[row][i++] == 0)
 			filled = 0;
 		if (filled)
 		{
-			if (count_row_left(row, shap) != input[8 + row])
+			if (count_visible_row_left(row, shap) != input[8 + row])
 				return (0);
-			if (count_row_right(row, shap) != input[12 + row])
+			if (count_visible_row_right(row, shap) != input[12 + row])
 				return (0);
 		}
 	}
+	return (1);
 }
 
 int	check_col(int col, int **shap, int *input)
@@ -42,19 +43,20 @@ int	check_col(int col, int **shap, int *input)
 	int	filled;
 
 	i = 0;
-	filled = 0;
+	filled = 1;
 	while (i < 4)
 	{
 		if (shap[col][i++] == 0)
 			filled = 0;
 		if (filled)
 		{
-			if (count_col_top(col, shap) != input[row])
+			if (count_visible_col_top(col, shap) != input[col])
 				return (0);
-			if (count_col_bottom(col, shap) != input[4 + row])
+			if (count_visible_col_bottom(col, shap) != input[4 + col])
 				return (0);
 		}
 	}
+	return (1);
 }
 
 int	check_viwes_partial(int row, int col, int **shap, int *input)

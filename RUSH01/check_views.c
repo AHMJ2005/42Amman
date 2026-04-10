@@ -10,27 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	count_row_left(int row, int **shap);
-int	count_row_right(int row, int **shap);
-int	count_col_top(int col, int **shap);
-int	count_col_bottom(int col, int **shap);
+int	count_visible_row_left(int row, int **shap);
+int	count_visible_row_right(int row, int **shap);
+int	count_visible_col_top(int col, int **shap);
+int	count_visible_col_bottom(int col, int **shap);
 
-int	check_views(int **shap, int *input)
+int	check_viwes(int **shap, int *input)
 {
 	int	i;
 
 	i = 0;
 	while (i < 4)
 	{
-		if (count_col_top(i, shap) != input[i])
+		if (count_visible_col_top(i, shap) != input[i])
 			return (0);
-		if (count_col_bottom(i, shap) != input[i + 4])
+		if (count_visible_col_bottom(i, shap) != input[i + 4])
 			return (0);
-		if (count_row_left(i, shap) != input[i + 8])
+		if (count_visible_row_left(i, shap) != input[i + 8])
 			return (0);
-		if (count_row_right(i, shap) != input[i + 12])
+		if (count_visible_row_right(i, shap) != input[i + 12])
 			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }

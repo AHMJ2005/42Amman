@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	prase_input(char *arg, int *input)
+int	parse_input(char *arg, int *input)
 {
 	int	i;
 	int	j;
@@ -27,11 +27,11 @@ int	prase_input(char *arg, int *input)
 			i++;
 			if (arg[i] != ' ' && arg[i] != '\0')
 				return (0);
-			else if (arg[i] == ' ')
-				i++;
-			else
-				return (0);
 		}
+		else if (arg[i] == ' ')
+			i++;
+		else
+			return (0);
 	}
 	return (j == 16);
 }

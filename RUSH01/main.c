@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int     prase_input(char *arg, int *input);
+int     parse_input(char *arg, int *input);
 int     solve(int row, int col, int **shap, int *input);
 
 void	ft_putchar(char c)
@@ -78,7 +78,7 @@ int	main(int argc, char **argv)
 			return (1);
 		i++;
 	}
-	if (argc != 2 || !prase_input(argv[1], input))
+	if (argc != 2 || !parse_input(argv[1], input))
 	{
 		write(1, "Error\n", 6);
 		return (1);
