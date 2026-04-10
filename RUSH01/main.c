@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <unistd.h>
 
 int     prase_input(char *arg, int *input);
@@ -65,8 +66,8 @@ int	main(int argc, char **argv)
 	int	i;
 	int	*input;
 
-	input = (int *)malloc(sizeof(int) * 4);
-	shap = (int **)malloc(sizeof(int *) * 4);
+	input = (int *)malloc(sizeof(int) * 16);
+	shap = (int **)malloc(sizeof(int *) * 16);
 	if (!(shap))
 		return (1);
 	i = 0;
@@ -87,4 +88,7 @@ int	main(int argc, char **argv)
 		write(1, "Error\n", 6);
 	else
 		ft_outputshap(shap);
+
+	free(shap);
+	free(input);
 }
