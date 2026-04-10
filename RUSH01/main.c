@@ -12,6 +12,9 @@
 
 #include <unistd.h>
 
+int     prase_input(char *arg, int *input);
+int     solve(int row, int col, int **shap, int *input);
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
