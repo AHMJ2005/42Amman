@@ -18,44 +18,36 @@ int	count_visible_col_bottom(int col, int **shap);
 int	check_row(int row, int **shap, int *input)
 {
 	int	i;
-	int	filled;
 
 	i = 0;
-	filled = 1;
 	while (i < 4)
 	{
-		if (shap[row][i++] == 0)
-			filled = 0;
-		if (filled)
-		{
-			if (count_visible_row_left(row, shap) != input[8 + row])
-				return (0);
-			if (count_visible_row_right(row, shap) != input[12 + row])
-				return (0);
-		}
+		if (shap[row][i] == 0)
+			return (1);
+		i++;
 	}
+	if (count_visible_row_left(row, shap) != input[8 + row])
+		return (0);
+	if (count_visible_row_right(row, shap) != input[12 + row])
+		return (0);
 	return (1);
 }
 
 int	check_col(int col, int **shap, int *input)
 {
 	int	i;
-	int	filled;
 
 	i = 0;
-	filled = 1;
 	while (i < 4)
 	{
-		if (shap[col][i++] == 0)
-			filled = 0;
-		if (filled)
-		{
-			if (count_visible_col_top(col, shap) != input[col])
-				return (0);
-			if (count_visible_col_bottom(col, shap) != input[4 + col])
-				return (0);
-		}
+		if (shap[i][col] == 0)
+			return (1);
+		i++;
 	}
+	if (count_visible_col_top(col, shap) != input[col])
+		return (0);
+	if (count_visible_col_bottom(col, shap) != input[4 + col])
+		return (0);
 	return (1);
 }
 
