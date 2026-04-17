@@ -1,8 +1,17 @@
-//intra box information
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_arg.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/17 17:14:26 by aabu-jwe          #+#    #+#             */
+/*   Updated: 2026/04/17 17:50:47 by aabu-jwe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #ifndef CHECK_ARG_H
-#define CHECK_ARG_H
+# define CHECK_ARG_H
 
-int check_arg(int arg, char **argv, char *default_dict);
+int	check_arg(int arg, char **argv, char *default_dict);
 
 #endif

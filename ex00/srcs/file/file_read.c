@@ -1,11 +1,20 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   file_read.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/17 18:14:06 by aabu-jwe          #+#    #+#             */
+/*   Updated: 2026/04/17 18:15:22 by aabu-jwe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include "ft.h"
 
 #define BUF_SIZE 4096
-
 
 //return returns the size of the file (bytes)
 ssize_t	file_size(char *file)
@@ -19,6 +28,7 @@ ssize_t	file_size(char *file)
 	close (fd);
 	return (bytes_read);
 }
+
 //return str read from the file
 char	*file_read(char *file)
 {

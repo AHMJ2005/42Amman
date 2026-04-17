@@ -1,7 +1,17 @@
-// box 42 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_digits.h                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/17 17:51:38 by aabu-jwe          #+#    #+#             */
+/*   Updated: 2026/04/17 17:51:53 by aabu-jwe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #ifndef CHECK_DIGITS_H
-#define CHECK_DIGITS_H
+# define CHECK_DIGITS_H
 
-int check_digits(char *str);
+int	check_digits(char *str);
 
 #endif

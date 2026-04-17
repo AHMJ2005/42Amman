@@ -1,8 +1,16 @@
-// box 42
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_dict_file.h                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/17 17:51:01 by aabu-jwe          #+#    #+#             */
+/*   Updated: 2026/04/17 17:51:25 by aabu-jwe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #ifndef CHECK_DICT_FILE_H
-#define CHECK_DICT_FILE_H
+# define CHECK_DICT_FILE_H
 
-int check_dict_file(char *file_name);
-
+int	check_dict_file(char *file_name);
 #endif
