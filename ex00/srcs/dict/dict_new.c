@@ -9,7 +9,8 @@
 /*   Updated: 2026/04/17 18:09:55 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <stdlib.h>
+#include "dict.h"
 static char	**str_arr_new(void)
 {
 	char	**arr;
@@ -30,7 +31,7 @@ t_dict	dict_new(void)
 	t_dict	dict;
 
 	dict.keys = str_arr_new();
-	dict.values = str_arr_new;
+	dict.values = str_arr_new();
 	dict.size = 0;
 	return (dict);
 }

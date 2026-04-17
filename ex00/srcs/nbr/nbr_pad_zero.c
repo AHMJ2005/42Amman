@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-ichar	*nbr_pad_zero(char c, int zeros)
+char	*nbr_pad_zero(char c, int zeros)
 {
 	char	*p;
 	int		i;

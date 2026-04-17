@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*st_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
@@ -21,5 +21,5 @@ char	*st_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	result (dest);
+	return (dest);
 }

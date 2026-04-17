@@ -21,12 +21,12 @@ int	dict_parse(t_dict *origin, char *str)
 	char	*word;
 
 	i = 0;
-	arr_check = 0;
+	err_check = 0;
 	while (str[i])
 	{
 		number = malloc(sizeof(char) * 64);
 		word = malloc(sizeof(char) * 64);
-		arr_check = dict_getnbr(number, str + i);
+		err_check = dict_getnbr(number, str + i);
 		if (!number || !word || err_check == -1)
 			return (-1);
 		i += err_check;

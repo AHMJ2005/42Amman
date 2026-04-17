@@ -43,7 +43,7 @@ char	*file_read(char *file)
 		return (NULL);
 	}
 	fd = open(file, O_RDONLY);
-	buffer = (char *)malloc(bytes_read);
+	buffer = (char *)malloc(bytes_read + 1);
 	bytes_read = read(fd, buffer, bytes_read);
 	if (bytes_read == -1)
 	{
@@ -51,6 +51,7 @@ char	*file_read(char *file)
 		close(fd);
 		return (NULL);
 	}
+	buffer[bytes_read] = '\0';
 	close(fd);
 	return (buffer);
 }

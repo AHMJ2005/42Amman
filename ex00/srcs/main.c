@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "main.h"
 
 static int	error(void)
@@ -30,6 +31,9 @@ static int	init(char *dict_path, char *input)
 	if (nbr_code == -1)
 		return (dict_error());
 	nbr_buffer_print(nbr);
+	free(str);
+	//dict_destroy(&dict);
+	nbr_buffer_destroy(nbr);
 	return (0);
 }
 
