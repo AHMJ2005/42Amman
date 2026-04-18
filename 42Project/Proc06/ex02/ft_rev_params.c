@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aalbess <aalbess@learner.42.tech>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/13 16:09:46 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/04/13 16:26:05 by aabu-jwe         ###   ########.fr       */
+/*   Created: 2025/09/28 16:11:32 by aalbess           #+#    #+#             */
+/*   Updated: 2025/09/28 16:14:01 by aalbess          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	ft_recursive_power(int nb, int power)
+int	main(int argc, char *argv[])
 {
-	if (power < 0)
-		return (0);
-	if (power == 0)
-		return (1);
-	else
-		return (nb * ft_recursive_power(nb, power - 1));
+	int	i;
+	int	j;
+
+	j = argc - 1;
+	while (j > 0)
+	{
+		i = -1;
+		while (argv[j][++i] != '\0')
+			write(1, &argv[j][i], 1);
+		j--;
+		write(1, "\n", 1);
+	}
+	return (0);
 }
